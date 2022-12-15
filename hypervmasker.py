@@ -1,5 +1,5 @@
 
-from hypervmasker import main as main
+from hypervmasker import main
 
 
 if __name__ == '__main__':
