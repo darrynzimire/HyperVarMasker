@@ -12,7 +12,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     name='HyperVarMasker',
     version='0.0.1',
-    description='A simple tools to mask hypervariable regions in a multiple-sequence alignment',
+    description='A simple tool to mask hypervariable regions in a multiple-sequence alignment FASTA database',
     long_description=long_description,
 
     author='Darryn Zimire',
@@ -47,7 +47,7 @@ setup(
     entry_points={
         'console_scripts': [
             'hypervmasker=man:main',
-            'hypervarmasker=main:main',
+            'hypervarmasker=hypervmasker/main:main',
 
 
         ],
