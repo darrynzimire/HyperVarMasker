@@ -47,7 +47,7 @@ setup(
     entry_points={
         'console_scripts': [
             'hypervmasker=man:main',
-            'hypervarmasker=hypervmasker/main:main',
+            'hypervarmasker=main:main',
 
 
         ],
