@@ -46,8 +46,8 @@ setup(
     data_files=[],
     entry_points={
         'console_scripts': [
-            'hypervmasker=man:main',
-            'hypervmasker-run=main:main',
+            'hypervmasker-help=hypervmasker:man',
+            'hypervmasker-run=hypervmasker:main',
 
 
         ],
