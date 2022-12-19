@@ -23,14 +23,14 @@ Here is a list of all the arguments needed to run HypeVarMasker:
 
 | Parameters	  | Description 	                                                               |    	
 |--------------|-----------------------------------------------------------------------------|
-| -- infile  	 | The input FASTA database to be processed	                                   |  
-| -- offset	   | The start and end positions of the target region in the reference sequence	 |  
-| -- refname   | The name of the reference sequence in the FASTA database<br/>               |
-| --refpos     | The position of the reference sequence in the FASTA database                |
+| -infile  	 | The input FASTA database to be processed	                                   |  
+| -offset	   | The start and end positions of the target region in the reference sequence	 |  
+| -refname   | The name of the reference sequence in the FASTA database<br/>               |
+
 
 ### Run example
 
-hypevarmasker -infile Input_alignment.fasta -offset 132 152  -refname HXB2 -outfilename
+hypevarmasker-run -infile Input_alignment.fasta -offset 132 152  -refname HXB2_Env
 
 
 ### License:
