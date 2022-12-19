@@ -1,0 +1,52 @@
+
+Run date: 2022-12-19
+Run time: 13:57
+Number of sequences processed: 6
+Input file name: ../Input_alignment.fasta
+Reference: HXB2
+
+
+Masking information: 
+------------------------------------------------------------
+
+                sequence name               target region
+1                    HXB2_Env  TDLKNDT-----NTNSSSGRMIMEKG
+2      B_TH_90_BK132_AY173951  TDLRNTT-----NTNSTAE-EMEAKG
+3    B_US_98_1058_11_AY331295  NDLNTTTS----NTTGTEG-LTMDKG
+4  B_NL_00_671_00T36_AY423387  TDANITSSNNITGSNNNSN-LEQMAR
+5      C_BR_92_BR025_d_U52953  SNRTIDY---------NNR-TDNMGG
+6  C_IN_95_95IN21068_AF067155  RNVNSTG-----NGTHSKT-YNESMK
+Run date: 2022-12-19
+Run time: 13:57
+Number of sequences processed: 6
+Input file name: ../Input_alignment.fasta
+Reference: HXB2
+
+
+Masking information: 
+------------------------------------------------------------
+
+                sequence name               target region
+1                    HXB2_Env  TDLKNDT-----NTNSSSGRMIMEKG
+2      B_TH_90_BK132_AY173951  TDLRNTT-----NTNSTAE-EMEAKG
+3    B_US_98_1058_11_AY331295  NDLNTTTS----NTTGTEG-LTMDKG
+4  B_NL_00_671_00T36_AY423387  TDANITSSNNITGSNNNSN-LEQMAR
+5      C_BR_92_BR025_d_U52953  SNRTIDY---------NNR-TDNMGG
+6  C_IN_95_95IN21068_AF067155  RNVNSTG-----NGTHSKT-YNESMK
+Run date: 2022-12-19
+Run time: 14:03
+Number of sequences processed: 6
+Input file name: ../Input_alignment.fasta
+Reference: HXB2
+
+
+Masking information: 
+------------------------------------------------------------
+
+                sequence name               target region
+1                    HXB2_Env  TDLKNDT-----NTNSSSGRMIMEKG
+2      B_TH_90_BK132_AY173951  TDLRNTT-----NTNSTAE-EMEAKG
+3    B_US_98_1058_11_AY331295  NDLNTTTS----NTTGTEG-LTMDKG
+4  B_NL_00_671_00T36_AY423387  TDANITSSNNITGSNNNSN-LEQMAR
+5      C_BR_92_BR025_d_U52953  SNRTIDY---------NNR-TDNMGG
+6  C_IN_95_95IN21068_AF067155  RNVNSTG-----NGTHSKT-YNESMK
