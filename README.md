@@ -30,7 +30,7 @@ Here is a list of all the arguments needed to run HypeVarMasker:
 
 ### Run example
 
-hypevarmasker -infile Input_alignment.fasta -offset 132 152  -refname HXB2 -outfilename
+hypevarmasker-run -infile Input_alignment.fasta -offset 132 152  -refname HXB2_Env
 
 
 ### License:
