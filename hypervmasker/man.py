@@ -22,14 +22,14 @@ def manpage():
           "\n"
           'This is the commands and arguments to run the application. \n'
           "\n"
-          'usage: hypervmasker -infile <Input_alignment.fasta>  -offset <132 152>  -refname <HXB2> \n'
+          'usage: hypervmasker-run -infile <Input_alignment.fasta>  -offset <132 152>  -refname <HXB2> \n'
           "\n"
           'Parameters: \n'
           '\n'
           '-infile           Input FASTA file to be processed \n'
           '-offset           start and end positions of the target regions (start, end) \n'
           '-refname          name of the reference sequence in the input FASTA file \n'
-          '-outfilename      output files prefix \n'
+          
 
           )
 
