@@ -21,8 +21,8 @@ def progress_bar(num):
 
 def make_dir():
 	now = datetime.now()
-	date_time_obj = datetime.strftime(now, '%Y%m%d-%H%M')
-	directory = './Masked_data'
+	date_time_obj = datetime.strftime(now, '%Y%m%d-%H-%M')
+	directory = '{}{}'.format('./HyperVarMasker_output_', date_time_obj)
 	file_path = os.path.join(directory)
 	if not os.path.isdir(directory):
 		os.mkdir(directory)

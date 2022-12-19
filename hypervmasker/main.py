@@ -57,7 +57,7 @@ def read_files(file, refname):
     try:
         with open(file, 'r') as handle:
             print('Reading input file: ' + file)
-            output.progress_bar(6)
+            output.progress_bar(4)
             dct = {record.id: str(record.seq) for record in SeqIO.parse(handle, 'fasta')}
             return dct
     except OSError:
@@ -135,15 +135,15 @@ def main():
     new_pos = calc_new_offset(x[0], x[1], (startpos, endpos))
     var_regions = []
     print('\nWriting processed sequences to output file....')
-    output.progress_bar(6)
+    output.progress_bar(4)
 
     for k, v in refseq.items():
         proc_seq = mask_seq((k, v), new_pos[0], new_pos[1])
         var_regions.append(proc_seq[0])
         output.write_seq(k, proc_seq[1])
-        
+
     print('\nWriting run information to file....')
-    output.progress_bar(6)
+    output.progress_bar(4)
     output.run_info(file, refname, refseq.keys(), var_regions)
     end_time = datetime.now()
     print('Duration: {}'.format(end_time - start_time))
