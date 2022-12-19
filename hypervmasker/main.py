@@ -140,7 +140,8 @@ def main():
     for k, v in refseq.items():
         proc_seq = mask_seq((k, v), new_pos[0], new_pos[1])
         var_regions.append(proc_seq[0])
-        output.write_seq(k, proc_seq)
+        output.write_seq(k, proc_seq[1])
+        
     print('\nWriting run information to file....')
     output.progress_bar(6)
     output.run_info(file, refname, refseq.keys(), var_regions)
