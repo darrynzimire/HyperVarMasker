@@ -14,6 +14,11 @@ def startmessage():
 	print(text)
 
 
+def progress_bar(num):
+	for i in tqdm(range(num)):
+		time.sleep(0.5)
+
+
 def make_dir():
 	now = datetime.now()
 	date_time_obj = datetime.strftime(now, '%Y%m%d-%H%M')
@@ -22,7 +27,7 @@ def make_dir():
 	if not os.path.isdir(directory):
 		os.mkdir(directory)
 
-	return file_path
+	return  file_path
 
 
 def write_seq(header, seq):
@@ -62,16 +67,6 @@ def run_info(file, ref, header, var_regions):
 		handle.write(df.to_string())
 
 
-#
-# def write_var_regions(header, seq):
-# 	fp = make_dir()
-# 	with open(fp + '/run_info.txt', 'a+') as handle:
-# 		handle.write('{}{}{}{}\n'.format('>', header, ' :', seq))
-
-		# print(f'{s[0]:<10}{s[1]:<17}{s[2]:<5}{s[3]:<12}{s[4]:>12}')
-		#     ^       ^^^       ^^^       ^^       ^^^       ^^^
-		# f-string  left-10   left-17   left-5   left-12   right-12
-		# handle.write('{}\n\n'.format(seq))
 
 
 

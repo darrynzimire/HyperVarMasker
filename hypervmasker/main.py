@@ -14,12 +14,14 @@ parser = argparse.ArgumentParser(description='This is a tool that masks the hype
 parser.add_argument('-infile',               type=str,   required=False,  metavar="<str>",        help='Directory where the fasta files are stored')
 parser.add_argument('-offset', nargs=2,    type=int,   required=False,  metavar='(start, end)', help='start and end positions of hypervariable region')
 parser.add_argument('-refname',            type=str,   required=True)
+parser.add_argument('-refpos', type=int, required=False, default=1,  help='position of reference sequence in FASTA database')
 
 
 args = parser.parse_args()
 file = args.infile
 # filepath = args.path
 refname = args.refname
+refpos = args.refpos
 (startpos, endpos) = args.offset
 # f_extension = args.out
 
@@ -61,7 +63,6 @@ def read_files(file, refname):
     except OSError:
         print('Warning: File not found!')
         print('Please check if correct path or file name was provided.\n\n')
-        # man.manpage()
         sys.exit()
 
 
@@ -123,18 +124,24 @@ def main():
     if sys.version_info[0] < 3:
         print("Please run this with a Python version greater than 3. Now exiting.")
         sys.exit()
+
     refseq = read_files(file, refname)
+    if refname not in refseq.keys():
+        print("It appears the specificed reference sequence name is not found in the input fasta file. "
+              "Please confirm and try again. Now exiting.")
+        sys.exit()
+
     x = calc_alignedpos(refseq[list(refseq.keys())[0]])
     new_pos = calc_new_offset(x[0], x[1], (startpos, endpos))
     var_regions = []
-    print('Writing processed sequences to output file....\n')
+    print('\nWriting processed sequences to output file....')
     output.progress_bar(6)
 
     for k, v in refseq.items():
         proc_seq = mask_seq((k, v), new_pos[0], new_pos[1])
         var_regions.append(proc_seq[0])
         output.write_seq(k, proc_seq)
-    print('Writing run information to file...')
+    print('\nWriting run information to file....')
     output.progress_bar(6)
     output.run_info(file, refname, refseq.keys(), var_regions)
     end_time = datetime.now()

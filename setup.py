@@ -36,6 +36,7 @@ setup(
     keywords='bioinformatics computational-biology',
     install_requires=['pandas',
                       'biopython',
+                      'tqdm'
                       ],
     packages=setuptools.find_packages(),
     extras_require={
